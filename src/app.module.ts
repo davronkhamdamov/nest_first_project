@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppService } from './app.service';
 import { CarsModul } from './cars/cars_module';
-// import { connectDb } from './connect_db';
+import { UserModule } from './users/users_module';
 
 @Module({
   imports: [
@@ -14,6 +14,7 @@ import { CarsModul } from './cars/cars_module';
       synchronize: true,
     }),
     CarsModul,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],

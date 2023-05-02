@@ -1,15 +1,6 @@
 import { Body, Controller, Param, Get, Post, HttpCode } from '@nestjs/common';
-import {
-  Delete,
-  Put,
-  UploadedFile,
-  UseInterceptors,
-} from '@nestjs/common/decorators';
-
+import { Delete, Put } from '@nestjs/common/decorators';
 import { cars } from './model/car_model';
-import { FileInterceptor } from '@nestjs/platform-express';
-import { randomUUID } from 'crypto';
-import { diskStorage } from 'multer';
 import { CarsService } from './car_service';
 
 @Controller('cars')
